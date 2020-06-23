@@ -71,3 +71,37 @@ class Banker extends Employee {
         System.out.println("Nmae:" + obj.name + "\nSalary: " + obj.salary + "\nBranch: " + obj.branch);
     }
 }
+
+
+# Super keyford for accesing parent properties for same name (for variable)
+public class Human {
+    int age = 60;
+}
+class Student extends Human{
+    int age = 22;
+    int newAge = super.age;
+    public static void main(String[] args) {
+        Student obj = new Student();
+        System.out.println("Normally invoked: " + obj.age);
+        System.out.println("Using super keywod: " + obj.newAge);
+    }
+}
+
+#or
+public class Human {
+    int age = 60;
+}
+class Student extends Human{
+    int age = 22;
+    void display() {
+        System.out.println(super.age);
+    }
+    
+    public static void main(String[] args) {
+        Student obj = new Student();
+        obj.display();
+    }
+}
+# Super keyford for accesing parent properties for same name (for method)
+
+
